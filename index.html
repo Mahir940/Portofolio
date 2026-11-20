@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahir Alfattaah Sanjaya – Student, Developer &amp; UI/UX Designer</title>
+<meta name="description" content="Portfolio of Mahir Alfattaah Sanjaya, a student at IDN Boarding School interested in web development, UI/UX design, and IoT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Turns on animations. If script.js fails to load within 4s, everything is shown without animation. -->
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.siteReady)document.documentElement.classList.remove("js")},4000)</script>
+</head>
+<body>
+<nav>
+ <div class="wrap">
+  <a class="logo" href="#home">MAHIR<span>.</span></a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="links">Menu</button>
+  <ul class="links" id="links">
+   <li><a href="#home" data-i18n="n_home">Home</a></li>
+   <li><a href="#about" data-i18n="n_about">About</a></li>
+   <li><a href="#skills" data-i18n="n_skills">Skills</a></li>
+   <li><a href="projects.html" data-i18n="n_projects">Projects</a></li>
+   <li><a href="#journey" data-i18n="n_journey">Journey</a></li>
+   <li><a href="#contact" data-i18n="n_contact">Contact</a></li>
+   <li><button class="lang" id="lang" aria-label="Switch language">ID</button></li>
+  </ul>
+ </div>
+</nav>
+
+<main>
+<section id="home">
+ <div class="wrap hero">
+  <div>
+   <h1 data-reveal>Mahir Alfattaah Sanjaya</h1>
+   <p class="lead" data-i18n="role" data-reveal>Student, aspiring developer and UI/UX designer.</p>
+   <p data-i18n="hero_p" data-reveal>I build for the web and the physical world: interfaces, code, and small IoT experiments.</p>
+   <div class="cta" data-reveal>
+    <a class="btn pri" href="projects.html" data-i18n="cta1">View projects</a>
+    <a class="btn" href="#contact" data-i18n="cta2">Get in touch</a>
+   </div>
+  </div>
+  <div class="term" aria-hidden="true" data-reveal>
+   <div class="bar">serial monitor</div>
+   <p><i>&gt;</i><span>name: Mahir Alfattaah Sanjaya</span></p>
+   <p><i>&gt;</i><span>school: IDN Boarding School</span></p>
+   <p><i>&gt;</i><span>location: Indonesia</span></p>
+   <p><i>&gt;</i><span>focus: web, ui/ux, iot</span></p>
+   <p><i>&gt;</i><span>status: learning, building</span><b class="cur"></b></p>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap about">
+  <div class="about-text">
+   <h2 data-i18n="about_h" data-reveal>A student who likes making things work.</h2>
+   <p data-i18n="about_p1" data-reveal>I’m a student at IDN Boarding School in Indonesia, interested in web development, programming, UI/UX design, IoT, and electronics.</p>
+   <p class="ph" data-i18n="about_p2" data-reveal>[Placeholder: add a few sentences about what got you into technology and what you want to learn next.]</p>
+  </div>
+  <!-- Profile photo: put the file at img/profile.jpg (portrait 4:5, e.g. 800x1000). Until then a placeholder box is shown. -->
+  <figure class="photo" data-reveal>
+   <img src="img/profile.jpg" alt="Mahir Alfattaah Sanjaya" width="800" height="1000" decoding="async" onerror="this.parentNode.classList.add('empty')">
+   <span class="photo-ph" aria-hidden="true"><i>&gt;</i>img/profile.jpg</span>
+  </figure>
+  <dl class="facts" data-reveal>
+   <div><dt data-i18n="f1">School</dt><dd>IDN Boarding School</dd></div>
+   <div><dt data-i18n="f2">Location</dt><dd>Indonesia</dd></div>
+   <div><dt data-i18n="f3">Focus</dt><dd>Web, UI/UX, IoT</dd></div>
+   <div><dt data-i18n="f4">Languages</dt><dd>English, Bahasa Indonesia</dd></div>
+  </dl>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="wrap">
+  <h2 data-i18n="skills_h" data-reveal>What I work with</h2>
+  <ul class="rows">
+   <li data-reveal><h3 data-i18n="s1">Web development</h3><p>HTML, CSS, JavaScript</p></li>
+   <li data-reveal><h3 data-i18n="s2">Mobile apps</h3><p>Flutter</p></li>
+   <li data-reveal><h3 data-i18n="s3">UI/UX design</h3><p>Wireframing, prototyping, interface design</p></li>
+   <li data-reveal><h3 data-i18n="s4">IoT and electronics</h3><p>Microcontrollers, sensors, circuits</p></li>
+  </ul>
+  <p class="ph note" data-i18n="s_note" data-reveal>[Editable: change this list to match what you actually use.]</p>
+ </div>
+</section>
+
+<section id="journey">
+ <div class="wrap">
+  <h2 data-i18n="j_h" data-reveal>Journey</h2>
+  <ol class="time">
+   <li class="now" data-reveal><time data-i18n="j_now">Now</time><h3 data-i18n="j1">Student at IDN Boarding School</h3><p data-i18n="j1p">Learning and building in web, UI/UX, and IoT.</p></li>
+   <li class="ph" data-reveal><time>[Year]</time><h3 data-i18n="j2">[Placeholder: your first project or coding moment]</h3></li>
+   <li class="ph" data-reveal><time>[Year]</time><h3 data-i18n="j3">[Placeholder: the next milestone]</h3></li>
+  </ol>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap two">
+  <div>
+   <h2 data-i18n="c_h" data-reveal>Let’s talk</h2>
+   <p data-i18n="c_p" data-reveal>Open to questions, collaborations, and feedback on my projects.</p>
+   <ul class="ext" data-reveal>
+    <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+    <li><a href="#">GitHub</a></li>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">LinkedIn</a></li>
+   </ul>
+   <p class="ph note" data-i18n="c_note" data-reveal>[Editable: replace the email and the # links with your own.]</p>
+  </div>
+  <form id="form" data-reveal>
+   <label><span data-i18n="l_name">Name</span><input name="name" required autocomplete="name"></label>
+   <label><span data-i18n="l_msg">Message</span><textarea name="msg" rows="5" required></textarea></label>
+   <button class="btn pri" type="submit" data-i18n="send">Send message</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Mahir Alfattaah Sanjaya</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

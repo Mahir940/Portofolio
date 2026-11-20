@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin proyek – Mahir</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="a-bar">
+ <a class="logo" href="projects.html">MAHIR<span>.</span></a>
+ <strong>Admin proyek</strong>
+ <span class="a-msg" id="msg" role="status" aria-live="polite"></span>
+ <span class="sp"></span>
+ <button class="btn a-sm" id="out" type="button">Keluar</button>
+ <button class="btn pri a-sm" id="save" type="button">Simpan</button>
+</header>
+
+<main class="a-main">
+ <aside class="a-side">
+  <ul class="a-list" id="list"></ul>
+  <button class="btn a-sm" id="add" type="button">+ Proyek baru</button>
+ </aside>
+ <div>
+  <p class="note" id="empty" hidden>Belum ada proyek. Klik “+ Proyek baru”.</p>
+  <form id="f" autocomplete="off">
+   <label><span>Judul</span><input name="title"></label>
+   <div class="a-row">
+    <label><span>Status</span>
+     <select name="status"><option value="progress">Sedang dikerjakan</option><option value="done">Selesai</option></select>
+    </label>
+    <label><span>Tahun (boleh kosong)</span><input name="year" placeholder="2026"></label>
+   </div>
+   <label class="a-chk"><input type="checkbox" name="featured"><span>Jadikan proyek utama (kartu besar di paling atas)</span></label>
+   <label><span>Deskripsi (English)</span><textarea name="d_en" rows="3"></textarea></label>
+   <label><span>Deskripsi (Indonesia)</span><textarea name="d_id" rows="3"></textarea></label>
+   <label><span>Tools, pisahkan dengan koma</span><input name="stack" placeholder="Flutter, Dart"></label>
+   <div>
+    <label><span>Gambar (path, boleh kosong)</span><input name="image" placeholder="img/bitaqwa.png"></label>
+    <div class="a-img">
+     <button class="btn a-sm" id="pick" type="button">Pilih gambar</button>
+     <input type="file" id="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+     <img id="pv" alt="" hidden>
+    </div>
+   </div>
+   <div class="a-row">
+    <label><span>Link demo</span><input name="demo" placeholder="https://"></label>
+    <label><span>Link kode (GitHub)</span><input name="code" placeholder="https://github.com/"></label>
+   </div>
+   <div class="a-act">
+    <button class="btn a-sm" id="up" type="button">Naik</button>
+    <button class="btn a-sm" id="dn" type="button">Turun</button>
+    <span class="sp"></span>
+    <button class="btn a-sm a-danger" id="del" type="button">Hapus proyek</button>
+   </div>
+  </form>
+ </div>
+</main>
+
+<script src="projects.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

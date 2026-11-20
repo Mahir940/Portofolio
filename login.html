@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Masuk admin – Mahir</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main class="a-login">
+ <form id="f">
+  <h1>Masuk admin</h1>
+  <label><span>Password</span><input type="password" name="pw" autocomplete="current-password" required autofocus></label>
+  <p class="note" id="err" role="alert"></p>
+  <button class="btn pri" type="submit">Masuk</button>
+  <a href="index.html">Kembali ke situs</a>
+ </form>
+</main>
+<script>
+// Sudah login? Langsung ke admin.
+fetch("/api/me",{headers:{"X-Requested-With":"admin"}}).then(r=>{if(r.ok)location.href="/admin"}).catch(()=>{});
+document.getElementById("f").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const err=document.getElementById("err");err.textContent="";
+  try{
+    const r=await fetch("/api/login",{method:"POST",headers:{"Content-Type":"application/json","X-Requested-With":"admin"},body:JSON.stringify({password:e.target.pw.value})});
+    const j=await r.json().catch(()=>({}));
+    if(r.ok)location.href="/admin";else err.textContent=j.error||"Gagal masuk.";
+  }catch(_){err.textContent="Tidak bisa terhubung ke server. Pastikan server.js sedang berjalan."}
+});
+</script>
+</body>
+</html>
